@@ -9,7 +9,7 @@ To create a template that stores employee information.
 * [License](#license)
 * [Questions](#questions)
 ## Installation
-Use node to access question form and answer accordingly. You can also run tests by using npm test in the terminal.
+Use node to access question form and answer accordingly. You can also run tests by using "npm test" in the terminal.
 ## Usage
 Using Node.js to render a html file.
 ## Contributing
