@@ -43,25 +43,31 @@ const employeeQuestions = [
 function init () {
     inquirer.
     prompt(
-        {
-            type: "confirm",
-            message: "Would you like to add an employee?",
-            name: "addEmployee"
+        { 
+            type: 'list',
+            message: 'Would you like to add another employee?',
+            choices: ["Yes", "No"],
+            name: 'addEmployee'
         }
     )
-    
     .then((answers) => {
-        if(answers.addEmployee === true) {
-            chooseType();
+        if (answers.addEmployee === "Yes") {
+            chooseType ();
         }
         else {
             writeFile()
         }
-    });
+    })
+    .catch(error => {
+        if(error) {
+            console.error(error)
+        }
+    })
+}
 
-    }
 
-
+    
+  
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
